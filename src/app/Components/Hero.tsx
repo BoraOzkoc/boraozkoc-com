@@ -4,10 +4,12 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 function Hero() {
   return (
-    <div className="flex flex-col justify-start items-start p-3 sm:p-12 ">
-      <h3 className="text-2xl sm:text-4xl font-bold">{`Hi, I'm Bora. A software engineer.`}</h3>
+    <div className="flex flex-col xl:justify-center justify-start xl:items-center items-start p-3 sm:p-12">
+      <h3 className="text-2xl sm:text-4xl font-bold">
+        {`Hi, I'm Bora!.`}
+      </h3>
       <h5 className="text-lg sm:text-xl">
-        Currently learning Frontend technologies
+        {`A passionate Full Stack software engineer with game development background`}
       </h5>
       <div className="flex flex-row gap-4 justify-center items-center pt-5">
         <IconButton

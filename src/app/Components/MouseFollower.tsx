@@ -14,7 +14,7 @@ const MouseFollower = () => {
   const ROTATION_SPEED = 0.1;
   const FOLLOW_DISTANCE = 10;
   const STOP_DISTANCE = 50;
-  const TRAIL_LENGTH = 10; // Number of trail particles
+  const TRAIL_LENGTH = 10;
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
