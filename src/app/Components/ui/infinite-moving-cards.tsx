@@ -22,28 +22,27 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
+  const [start, setStart] = useState(true);
+
   useEffect(() => {
-    addAnimation();
-  }, []);
-
-  const [start, setStart] = useState(false);
-
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
-
-      getDirection();
-      getSpeed();
-      setStart(true);
+    if (!containerRef.current || !scrollerRef.current) {
+      return;
     }
-  }
+    
+    const scrollerContent = Array.from(scrollerRef.current.children);
+    
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      scrollerRef.current?.appendChild(duplicatedItem);
+    });
+
+    getDirection();
+    getSpeed();
+    
+    requestAnimationFrame(() => {
+      setStart(true);
+    });
+  }, [direction, speed]);
 
   const getDirection = () => {
     if (containerRef.current) {
@@ -90,19 +89,19 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <div
-            className="rounded-3xl p-px hover:p-1 transition-all duration-300 bg-gradient-to-b from-sky-300 via-purple-300 to-red-300 w-[70px] h-[70px] max-w-full relative"
-            key={`${item.quote}-${idx}`}
+          <li
+            className="rounded-3xl p-px hover:p-1 hover:pb-6 transition-all duration-300 bg-gradient-to-b from-sky-300 via-purple-300 to-red-300 w-[70px] h-[70px] hover:w-[100px] max-w-full relative group"
+            key={idx}
           >
-            <div
-              className="rounded-3xl w-full h-full bg-gray-800 flex items-center justify-center"
-              
-            >
-              <div className=" flex flex-row items-center justify-center w-full h-full">
+            <div className="rounded-3xl w-full h-full bg-gray-800 flex flex-col items-center justify-center">
+              <div className="flex flex-row items-center justify-center w-full h-full">
                 {item.icon}
               </div>
+              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-600 pointer-events-none text-black rounded-lg w-full text-center bottom-1 text-xs">
+                {item.quote}
+              </div>
             </div>
-          </div>
+          </li>
         ))}
       </ul>
     </div>

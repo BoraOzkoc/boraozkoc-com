@@ -13,7 +13,9 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       animation: {
-        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        "infinite-scroll": "infinite-scroll 10s linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 10s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         scroll: {
@@ -21,10 +23,19 @@ const config: Config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      animation: ['hover', 'group-hover'],
+    },
+  },
 };
 
 export default config;
