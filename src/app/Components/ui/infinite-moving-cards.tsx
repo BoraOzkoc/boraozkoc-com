@@ -91,7 +91,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <div
-            className="rounded-3xl p-px bg-gradient-to-b from-sky-300 via-purple-300 to-red-300 w-[70px] h-[70px] max-w-full relative"
+            className="rounded-3xl p-px hover:p-1 transition-all duration-300 bg-gradient-to-b from-sky-300 via-purple-300 to-red-300 w-[70px] h-[70px] max-w-full relative"
             key={`${item.quote}-${idx}`}
           >
             <div
