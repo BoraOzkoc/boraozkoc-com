@@ -45,27 +45,21 @@ const MouseFollower = () => {
         const dy = mouse.y - prev.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        // Update isMoving state based on movement
         setIsMoving(distance > STOP_DISTANCE);
 
         const targetAngle = Math.atan2(dy, dx) * (180 / Math.PI);
         setRotation((prevRotation) => {
-          // Normalize angles to 0-360 range
           const normalizedTarget = ((targetAngle % 360) + 360) % 360;
           const normalizedPrev = ((prevRotation % 360) + 360) % 360;
-
-          // Calculate the two possible rotation differences
           const diff1 = normalizedTarget - normalizedPrev;
           const diff2 = diff1 > 0 ? diff1 - 360 : diff1 + 360;
-
-          // Choose the smaller rotation
           const diff = Math.abs(diff1) < Math.abs(diff2) ? diff1 : diff2;
 
           return prevRotation + diff * ROTATION_SPEED;
         });
 
         if (distance < STOP_DISTANCE) {
-          setTrail([]); // Clear trail when stopped
+          setTrail([]);
           return prev;
         }
 
@@ -79,7 +73,6 @@ const MouseFollower = () => {
           newY = prev.y + (targetY - prev.y) * SPEED;
         }
 
-        // Only update trail if moving
         if (distance > STOP_DISTANCE) {
           setTrail((oldTrail) => {
             const newTrail = [...oldTrail, { x: newX, y: newY }];

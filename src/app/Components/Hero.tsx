@@ -2,6 +2,7 @@ import React from "react";
 import IconButton from "./IconButton";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import TechStack from "./TechStack";
 
 function Hero() {
   return (
@@ -18,6 +19,9 @@ function Hero() {
           />
           <IconButton link="https://github.com/BoraOzkoc" icon={FaGithub} />
         </div>
+      </div>
+      <div className="absolute bottom-0">
+        <TechStack />
       </div>
     </div>
   );
