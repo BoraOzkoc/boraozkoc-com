@@ -30,7 +30,7 @@ function ProjectCard({
         <div className="flex w-full flex-row justify-between items-center px-6 ">
           <div className="flex w-full flex-row justify-between items-center">
             <div className="flex flex-row">
-              <h1 className="underline">{projectName}</h1>
+              <h1 className="font-semibold text-xl">{projectName}</h1>
             </div>
             <div className="flex flex-row gap-2">
               {projectIcons.map((icon, index) => (
@@ -42,7 +42,7 @@ function ProjectCard({
         <div className="flex flex-row w-full px-6 justify-start items-start text-start">
           <span className="text-xs">{projectType}</span>
         </div>
-        <div className="w-full h-[100px] flex justify-center items-center text-left text-xs px-6">
+        <div className="w-full h-48 flex justify-center items-start text-left text-sm px-6 pt-2">
           <p>{projectDescription}</p>
         </div>
       </div>
