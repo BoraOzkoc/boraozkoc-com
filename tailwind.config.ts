@@ -14,19 +14,20 @@ const config: Config = {
       },
       animation: {
         "infinite-scroll": "infinite-scroll 10s linear infinite",
-        scroll:
-          "scroll var(--animation-duration, 10s) var(--animation-direction, forwards) linear infinite",
+        // scroll:
+        //   "scroll var(--animation-duration, 10s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
-        scroll: {
-          to: {
-            transform: "translate(calc(-50% - 1rem))",
-          },
-        },
+        // scroll: {
+        //   to: {
+        //     transform: "translate(calc(-50% - 1rem))",
+        //   },
+        // },
         "infinite-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(calc(-50% - 0.2rem))" },
+          from: { transform: "translateX(0%)" },
+          to: { transform: "translateX(calc(-100% - 0.5rem))" },
         },
+        
       },
     },
   },

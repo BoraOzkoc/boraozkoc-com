@@ -43,12 +43,12 @@ const techStackItems = [
 
 function TechStack() {
   return (
-    <div className="relative overflow-hidden flex w-[300px] h-[100px] border rounded-3xl m-6">
+    <div className="relative flex w-full h-[100px]  rounded-3xl my-6 justify-center items-center">
       <div className="absolute left-0 top-0 w-12 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
 
-      <div className="overflow-hidden flex w-[300px]">
-        <div className="flex animate-infinite-scroll hover:pause gap-2">
-          <ul className="flex flex-row justify-center items-center shrink-0 gap-2">
+      <div className="flex w-1/2  overflow-hidden">
+        <div className="flex w-full   hover:pause gap-2">
+          <ul className="flex flex-row justify-center animate-infinite-scroll items-center shrink-0 gap-2">
             {[...techStackItems].map((item, idx) => (
               <li
                 className="rounded-3xl p-px hover:p-1 hover:pb-6 transition-all duration-300 bg-gradient-to-b from-sky-300 via-purple-300 to-red-300 w-[70px] h-[70px] hover:w-[100px] max-w-full relative group"
@@ -65,7 +65,7 @@ function TechStack() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-row justify-center items-center shrink-0 gap-2">
+          <ul className="flex flex-row animate-infinite-scroll justify-center items-center shrink-0 gap-2">
             {[...techStackItems].map((item, idx) => (
               <li
                 className="rounded-3xl p-px hover:p-1 hover:pb-6 transition-all duration-300 bg-gradient-to-b from-sky-300 via-purple-300 to-red-300 w-[70px] h-[70px] hover:w-[100px] max-w-full relative group"
