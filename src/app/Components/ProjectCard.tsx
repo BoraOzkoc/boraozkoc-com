@@ -26,11 +26,12 @@ function ProjectCard({
       <div className="flex flex-col w-full h-[full] justify-start items-center text-center rounded-2xl bg-gradient-to-t from-black  to-gray-800">
         <div className="w-full h-[50%] flex justify-center items-center p-3 rounded-2xl">
           <Image
-            className="w-full h-[200px] rounded-3xl"
+            className="w-full h-[200px] object-contain rounded-3xl"
             src={projectImage}
             alt="Project Image"
             width={300}
             height={300}
+            style={{ objectFit: 'contain' }}
           />
         </div>
         <div className="flex w-full flex-row justify-between items-center px-6 ">
