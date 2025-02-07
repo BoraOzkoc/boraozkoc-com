@@ -3,6 +3,8 @@ import IconButton from "./IconButton";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoAppleAppstore } from "react-icons/io5";
+import { IoMail } from "react-icons/io5";
+
 import TechStack from "./TechStack";
 
 function Hero() {
@@ -19,10 +21,14 @@ function Hero() {
             icon={FaLinkedin}
           />
           <IconButton link="https://github.com/BoraOzkoc" icon={FaGithub} />
-          <IconButton link="https://apps.apple.com/developer/bora-ozkoc/id1742469862" icon={IoLogoAppleAppstore} />
+          <IconButton
+            link="https://apps.apple.com/developer/bora-ozkoc/id1742469862"
+            icon={IoLogoAppleAppstore}
+          />
+          <IconButton link="mailto:bora.ozkoc@hotmail.com" icon={IoMail} />
         </div>
       </div>
-      <div className="flex justify-center items-center">
+      <div id="techstack" className="flex justify-center items-center">
         <TechStack />
       </div>
     </div>

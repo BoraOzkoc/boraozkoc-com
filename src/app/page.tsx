@@ -6,8 +6,12 @@ export default function Home() {
   return (
     <main className="h-fit w-full flex flex-col px-10 xl:justify-center justify-start items-center">
       <MouseFollower />
-      <Hero />
-      <Projects />
+      <div>
+        <Hero />
+      </div>
+      <div>
+        <Projects />
+      </div>
     </main>
   );
 }
