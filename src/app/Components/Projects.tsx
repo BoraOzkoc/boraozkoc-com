@@ -104,9 +104,9 @@ function Projects() {
   const visibleProjects = showAll ? allProjects : allProjects.slice(0, 2);
 
   return (
-    <div className="flex flex-col gap-10 w-full min-h-screen justify-center items-center">
+    <div className="flex flex-col gap-10 w-fit min-h-screen justify-center items-center">
       <h1 className="text-4xl font-bold">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {visibleProjects.map((project, index) => (
           <ProjectCard
             key={index}

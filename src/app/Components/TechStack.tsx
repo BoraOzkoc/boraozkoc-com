@@ -44,8 +44,8 @@ const techStackItems = [
 function TechStack() {
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex w-full h-[100px] rounded-3xl my-6 justify-center items-center">
-        <div className="relative flex w-[500px] overflow-hidden">
+      <div className=" flex w-full h-[100px] rounded-3xl my-6 justify-center items-center">
+        <div className="relative flex w-[300px] sm:w-[500px] overflow-hidden">
           <div className="absolute left-0 top-0 w-12 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
           <div className="absolute top-0 right-0 w-12 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
           <div className="flex w-full gap-2">

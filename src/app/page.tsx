@@ -1,17 +1,14 @@
-import Hero from "./Components/Hero";
-import MouseFollower from "./Components/MouseFollower";
-import Projects from "./Components/Projects";
-
+import Hero from './Components/Hero';
+import MouseFollower from './Components/MouseFollower';
+import Projects from './Components/Projects';
+import Bio from './Components/Bio';
 export default function Home() {
-  return (
-    <main className="h-fit w-full flex flex-col px-10 xl:justify-center justify-start items-center">
-      <MouseFollower />
-      <div>
-        <Hero />
-      </div>
-      <div>
-        <Projects />
-      </div>
-    </main>
-  );
+	return (
+		<main className="container flex h-full w-full flex-col items-center justify-center">
+			<MouseFollower />
+			<Hero />
+			<Bio />
+			<Projects />
+		</main>
+	);
 }
