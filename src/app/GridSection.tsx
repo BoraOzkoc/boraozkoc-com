@@ -15,7 +15,7 @@ const ooohBaby = Oooh_Baby({
 
 function GridSection() {
 	return (
-		<section className="flex h-full w-full items-center justify-center">
+		<section className="flex h-[85vh] w-full items-center justify-center">
 			<div className="flex w-[70%] grid-cols-4 grid-rows-4 flex-col gap-4 md:grid">
 				<div className="col-span-2 row-span-6 row-start-1 flex items-center justify-center transition-all duration-500 hover:scale-[1.025]">
 					<div className="flex w-full flex-row items-center justify-start gap-2">
