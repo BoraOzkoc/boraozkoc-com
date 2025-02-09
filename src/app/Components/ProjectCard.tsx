@@ -26,7 +26,7 @@ function ProjectCard({
 			rel="noopener noreferrer"
 			className="w-[280px] rounded-2xl p-[6px] transition-transform hover:scale-110 hover:cursor-pointer"
 		>
-			<div className="flex h-96 w-full flex-col items-center justify-start rounded-2xl bg-gradient-to-t from-black to-gray-800 text-center">
+			<div className="flex h-96 w-full flex-col items-center justify-start rounded-2xl border border-[#b7b7b753] bg-gradient-to-t from-[#22272f97] to-[#22272f97] text-center">
 				<div className="flex h-[50%] w-full items-center justify-center rounded-2xl p-3">
 					<Image
 						className="h-[150px] w-full rounded-3xl object-contain"
