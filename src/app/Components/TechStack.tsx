@@ -2,17 +2,18 @@
 
 import React from 'react';
 import { RiNextjsLine, RiReactjsLine } from 'react-icons/ri';
-import { SiTailwindcss, SiJavascript, SiTypescript, SiUnity } from 'react-icons/si';
-import { TbBrandCSharp } from 'react-icons/tb';
+import { SiTailwindcss, SiUnity, SiAppstore } from 'react-icons/si';
+import { GrSwift } from 'react-icons/gr';
+import { TbBrandCSharp, TbBrandTypescript } from 'react-icons/tb';
+import { DiJavascript1 } from 'react-icons/di';
+import { FaSlack } from 'react-icons/fa6';
+import { FaGit } from 'react-icons/fa';
+import { LuGithub } from 'react-icons/lu';
 
 const techStackItems = [
 	{
 		quote: 'React',
 		icon: <RiReactjsLine className="h-full w-full p-3" />
-	},
-	{
-		quote: 'TypeScript',
-		icon: <SiTypescript className="h-full w-full p-3" />
 	},
 	{
 		quote: 'Next.js',
@@ -22,10 +23,7 @@ const techStackItems = [
 		quote: 'Tailwind CSS',
 		icon: <SiTailwindcss className="h-full w-full p-3" />
 	},
-	{
-		quote: 'JavaScript',
-		icon: <SiJavascript className="h-full w-full p-3" />
-	},
+
 	{
 		quote: 'Unity',
 		icon: <SiUnity className="h-full w-full p-3" />
@@ -33,6 +31,34 @@ const techStackItems = [
 	{
 		quote: 'C#',
 		icon: <TbBrandCSharp className="h-full w-full p-3" />
+	},
+	{
+		quote: 'App Store',
+		icon: <SiAppstore className="h-full w-full p-3" />
+	},
+	{
+		quote: 'Swift',
+		icon: <GrSwift className="h-full w-full p-3" />
+	},
+	{
+		quote: 'TypeScript',
+		icon: <TbBrandTypescript className="h-full w-full p-3" />
+	},
+	{
+		quote: 'JavaScript',
+		icon: <DiJavascript1 className="h-full w-full p-3" />
+	},
+	{
+		quote: 'Slack',
+		icon: <FaSlack className="h-full w-full p-3" />
+	},
+	{
+		quote: 'Git',
+		icon: <FaGit className="h-full w-full p-3" />
+	},
+	{
+		quote: 'GitHub',
+		icon: <LuGithub className="h-full w-full p-3" />
 	}
 ];
 

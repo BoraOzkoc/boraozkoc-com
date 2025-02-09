@@ -30,3 +30,6 @@ body {
 .animate-scroll {
 	animation: scroll var(--animation-duration) var(--animation-direction) infinite linear;
 }
+.card {
+	@apply rounded-xl border border-[#b7b7b753] bg-[#22272f97];
+}

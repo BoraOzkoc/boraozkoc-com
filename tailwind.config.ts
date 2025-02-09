@@ -17,16 +17,9 @@ const config: Config = {
 				foreground: 'var(--foreground)'
 			},
 			animation: {
-				'infinite-scroll': 'infinite-scroll 10s linear infinite'
-				// scroll:
-				//   "scroll var(--animation-duration, 10s) var(--animation-direction, forwards) linear infinite",
+				'infinite-scroll': 'infinite-scroll 20s linear infinite'
 			},
 			keyframes: {
-				// scroll: {
-				//   to: {
-				//     transform: "translate(calc(-50% - 1rem))",
-				//   },
-				// },
 				'infinite-scroll': {
 					from: { transform: 'translateX(0%)' },
 					to: { transform: 'translateX(calc(-100% - 0.5rem))' }
