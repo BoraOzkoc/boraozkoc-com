@@ -90,7 +90,7 @@ function Projects() {
 	const visibleProjects = showAll ? allProjects : allProjects.slice(0, 2);
 
 	return (
-		<div className="flex h-fit w-fit flex-col items-center justify-center gap-10">
+		<div id="projects" className="flex h-fit w-fit flex-col items-center justify-center gap-10">
 			<h1 className="text-4xl font-bold">Projects</h1>
 			<div className="grid grid-cols-1 gap-10 md:grid-cols-2">
 				{visibleProjects.map((project, index) => (
