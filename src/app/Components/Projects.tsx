@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import { FaReact, FaSwift } from 'react-icons/fa6';
 import {
@@ -14,6 +14,20 @@ import { TbBrandCSharp } from 'react-icons/tb';
 
 function Projects() {
 	const [showAll, setShowAll] = useState(false);
+
+	useEffect(() => {
+		if (!showAll) {
+			const projectsSection = document.getElementById('projects');
+			if (projectsSection) {
+				const sectionBottom =
+					projectsSection.offsetTop + projectsSection.offsetHeight - window.innerHeight;
+				window.scrollTo({
+					top: Math.max(0, sectionBottom),
+					behavior: 'smooth'
+				});
+			}
+		}
+	}, [showAll]);
 
 	const allProjects = [
 		{
@@ -90,7 +104,10 @@ function Projects() {
 	const visibleProjects = showAll ? allProjects : allProjects.slice(0, 2);
 
 	return (
-		<div id="projects" className="flex h-fit w-fit flex-col items-center justify-center gap-10">
+		<div
+			id="projects"
+			className="flex h-fit w-fit flex-col items-center justify-center gap-10 py-6"
+		>
 			<h1 className="text-4xl font-bold">Projects</h1>
 			<div className="grid grid-cols-1 gap-10 md:grid-cols-2">
 				{visibleProjects.map((project, index) => (
@@ -107,7 +124,7 @@ function Projects() {
 			</div>
 			<button
 				onClick={() => setShowAll(!showAll)}
-				className="w-full px-4 text-right text-blue-500 transition-colors hover:text-blue-700"
+				className="flex w-fit items-center justify-center rounded-lg border border-white bg-black px-4 text-right text-white transition-colors hover:bg-white hover:text-black"
 			>
 				{showAll ? 'See Less' : 'See More'}
 			</button>

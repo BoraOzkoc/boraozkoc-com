@@ -20,12 +20,12 @@ function GridSection() {
 			<div className="flex w-[65%] grid-cols-4 grid-rows-8 flex-col gap-4 sm:h-[550px] md:grid">
 				<div className="col-span-2 row-span-3 row-start-1 flex items-center justify-center transition-all duration-500 hover:scale-[1.025]">
 					<div className="flex w-full flex-row items-center justify-start gap-2">
-						<div className="flex flex-col items-start justify-center gap-0 px-3 text-3xl">
+						<div className="flex flex-col items-start justify-center gap-0 px-3 text-3xl lg:text-end">
 							<span>Hi</span>
 							<span>{`I'm`}</span>
 						</div>
 						<div className="flex w-full items-center justify-center">
-							<span className={`${ooohBaby.className} text-3xl md:text-4xl lg:text-6xl`}>
+							<span className={`${ooohBaby.className} px-1 text-3xl md:text-4xl lg:text-5xl`}>
 								BORA ÖZKOÇ
 							</span>
 						</div>
