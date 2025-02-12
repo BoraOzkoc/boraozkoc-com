@@ -19,13 +19,15 @@ function GridSection() {
 		<section className="flex h-full w-full items-center justify-center pt-6 md:h-[85vh]">
 			<div className="flex w-[65%] grid-cols-4 grid-rows-8 flex-col gap-4 sm:h-[550px] md:grid">
 				<div className="col-span-2 row-span-3 row-start-1 flex items-center justify-center transition-all duration-500 hover:scale-[1.025]">
-					<div className="flex w-full flex-row items-center justify-start gap-2">
-						<div className="flex flex-col items-start justify-center gap-0 px-3 text-3xl lg:text-end">
+					<div className="flex w-full flex-row items-center justify-center gap-2">
+						<div className="text-md flex flex-col items-end justify-center gap-0 text-end leading-none">
 							<span>Hi</span>
 							<span>{`I'm`}</span>
 						</div>
-						<div className="flex w-full items-center justify-center">
-							<span className={`${ooohBaby.className} px-1 text-3xl md:text-4xl lg:text-5xl`}>
+						<div className="flex items-center justify-center">
+							<span
+								className={`${ooohBaby.className} text-2xl md:text-3xl lg:text-4xl xl:text-5xl`}
+							>
 								BORA ÖZKOÇ
 							</span>
 						</div>
@@ -36,20 +38,20 @@ function GridSection() {
 						<Image src="/favicon.ico" alt="About Me" width={140} height={140} />
 					</div>
 					<div className="flex h-full w-full flex-col items-start justify-center gap-2">
-						<h5 className="max-w-lg text-left text-xs leading-relaxed text-white max-md:p-3 sm:text-base">
+						<h5 className="max-w-lg text-center text-xs leading-relaxed text-white max-md:p-3 sm:text-base md:text-left">
 							{`A software engineer with a passion for full-stack development and a background in game development.`}
 						</h5>
 					</div>
 				</div>
 				<div className="card group col-span-2 col-start-3 row-span-4 row-start-1 overflow-hidden transition-all duration-500 hover:scale-[1.025]">
 					<Link href="#projects" scroll={true}>
-						<div className="flex flex-col gap-2 p-6">
+						<div className="flex flex-col gap-2 md:p-6">
 							<div className="flex flex-row items-center justify-center p-1 max-sm:h-full sm:pt-3">
-								<span className="text-3xl font-bold transition-all duration-300 group-hover:translate-y-0 sm:translate-y-10">
+								<span className="text-3xl font-bold transition-all duration-300 group-hover:translate-y-0 md:translate-y-10">
 									Projects
 								</span>
 							</div>
-							<div className="flex flex-row items-center justify-center gap-2 max-sm:hidden">
+							<div className="flex flex-row items-center justify-center gap-2 max-md:hidden">
 								<div className="-translate-x-20 translate-y-16 transition-all duration-500 group-hover:translate-x-0 group-hover:translate-y-0">
 									<Image
 										className="rounded-xl"
@@ -85,14 +87,14 @@ function GridSection() {
 				</div>
 				<div className="card col-start-3 row-span-2 row-start-5 flex flex-row items-center justify-center transition-all duration-500 hover:scale-[1.025]">
 					<Link
-						className="flex h-full w-full items-center justify-center py-3"
+						className="flex h-full w-full items-center justify-center py-3 transition-all duration-500 hover:scale-[1.5]"
 						href="https://luqagames.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<Image
 							className="rounded-xl"
-							src="/luqa.jpeg"
+							src="/PNG_image-removebg-preview.png"
 							alt="Game Link"
 							width={100}
 							height={100}
