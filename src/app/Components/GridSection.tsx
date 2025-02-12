@@ -94,7 +94,7 @@ function GridSection() {
 					>
 						<Image
 							className="rounded-xl"
-							src="/PNG_image-removebg-preview.png"
+							src="/Luqa.png"
 							alt="Game Link"
 							width={100}
 							height={100}
