@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This project showcases my professional experience, projects, and technical skills with an interactive and engaging user interface.
+A modern, responsive portfolio website built with React, Next.js, TypeScript, and Tailwind CSS. This project showcases my professional experience, projects, and technical skills with an interactive and engaging user interface.
 
 ## Features
 
@@ -77,12 +77,6 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 ├── .prettierrc               # Prettier configuration
 └── tsconfig.json             # TypeScript configuration
 ```
-
-## Deployment
-
-The project is configured for easy deployment on Vercel. Simply connect your GitHub repository to Vercel for automatic deployments.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/your-repo)
 
 ## Contact
 
