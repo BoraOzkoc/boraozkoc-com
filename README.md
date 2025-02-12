@@ -13,6 +13,7 @@ A modern, responsive portfolio website built with React, Next.js, TypeScript, an
 
 ## Tech Stack
 
+- [React](https://react.dev/) - JavaScript library for building user interfaces
 - [Next.js](https://nextjs.org/) - React framework for production
 - [TypeScript](https://www.typescriptlang.org/) - Static type checking
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
