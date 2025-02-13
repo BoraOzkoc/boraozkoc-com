@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import { FaReact, FaSwift } from 'react-icons/fa6';
 import {
@@ -14,26 +14,25 @@ import { TbBrandCSharp } from 'react-icons/tb';
 
 function Projects() {
 	const [showAll, setShowAll] = useState(false);
-	const [isInitialLoad, setIsInitialLoad] = useState(true);
 
-	useEffect(() => {
-		if (isInitialLoad) {
-			setIsInitialLoad(false);
-			return;
-		}
+	const handleShowToggle = () => {
+		setShowAll(!showAll);
 
-		if (!showAll) {
-			const projectsSection = document.getElementById('projects');
-			if (projectsSection) {
-				const sectionBottom =
-					projectsSection.offsetTop + projectsSection.offsetHeight - window.innerHeight;
-				window.scrollTo({
-					top: Math.max(0, sectionBottom),
-					behavior: 'smooth'
-				});
-			}
+		// Only scroll when clicking "See Less"
+		if (showAll) {
+			setTimeout(() => {
+				const projectsSection = document.getElementById('projects');
+				if (projectsSection) {
+					const sectionBottom =
+						projectsSection.offsetTop + projectsSection.offsetHeight - window.innerHeight;
+					window.scrollTo({
+						top: Math.max(0, sectionBottom),
+						behavior: 'smooth'
+					});
+				}
+			}, 0);
 		}
-	}, [showAll, isInitialLoad]);
+	};
 
 	const allProjects = [
 		{
@@ -126,7 +125,7 @@ function Projects() {
 				))}
 			</div>
 			<button
-				onClick={() => setShowAll(!showAll)}
+				onClick={handleShowToggle}
 				className="flex w-fit items-center justify-center rounded-lg border border-white bg-black px-4 text-right text-white transition-colors hover:bg-white hover:text-black"
 			>
 				{showAll ? 'See Less' : 'See More'}
