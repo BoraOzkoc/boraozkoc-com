@@ -14,8 +14,14 @@ import { TbBrandCSharp } from 'react-icons/tb';
 
 function Projects() {
 	const [showAll, setShowAll] = useState(false);
+	const [isInitialLoad, setIsInitialLoad] = useState(true);
 
 	useEffect(() => {
+		if (isInitialLoad) {
+			setIsInitialLoad(false);
+			return;
+		}
+
 		if (!showAll) {
 			const projectsSection = document.getElementById('projects');
 			if (projectsSection) {
@@ -27,7 +33,7 @@ function Projects() {
 				});
 			}
 		}
-	}, [showAll]);
+	}, [showAll, isInitialLoad]);
 
 	const allProjects = [
 		{
