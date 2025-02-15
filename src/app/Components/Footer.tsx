@@ -28,7 +28,7 @@ function Footer() {
 				</div>
 				<div className="transition-all duration-200 hover:scale-110">
 					<a
-						href="https://apps.apple.com/tr/developer/bora-ozkoc/id1656888393"
+						href="https://apps.apple.com/developer/bora-ozkoc/id1742469862"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
