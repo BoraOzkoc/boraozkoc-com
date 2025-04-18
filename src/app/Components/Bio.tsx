@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Bio() {
 	return (
-		<div className="flex h-full flex-col items-center justify-center gap-10">
+		<div id="about" className="flex h-full flex-col items-center justify-center gap-10">
 			<div>
 				<h1 className="text-4xl font-bold">About Me</h1>
 			</div>

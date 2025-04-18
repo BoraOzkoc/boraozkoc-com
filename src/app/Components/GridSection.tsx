@@ -33,15 +33,17 @@ function GridSection() {
 						</div>
 					</div>
 				</div>
-				<div className="card col-span-2 col-start-1 row-span-3 flex flex-col place-content-center place-items-center px-2 transition-all duration-500 hover:scale-[1.025] sm:flex-row">
-					<div className="flex h-full w-2/5 items-center justify-center">
-						<Image src="/favicon.ico" alt="About Me" width={140} height={140} />
-					</div>
-					<div className="flex h-full w-full flex-col items-start justify-center gap-2">
-						<h5 className="max-w-lg text-center text-xs leading-relaxed text-white max-md:p-3 sm:text-base md:text-left">
-							{`A software engineer with a passion for full-stack development and a background in game development.`}
-						</h5>
-					</div>
+				<div className="card col-span-2 col-start-1 row-span-3 flex cursor-pointer flex-col place-content-center place-items-center px-2 transition-all duration-500 hover:scale-[1.025] sm:flex-row">
+					<Link className="flex h-full w-full" href="#about" scroll={true}>
+						<div className="flex h-full w-2/5 items-center justify-center">
+							<Image src="/favicon.ico" alt="About Me" width={140} height={140} />
+						</div>
+						<div className="flex h-full w-full flex-col items-start justify-center gap-2">
+							<h5 className="max-w-lg text-center text-xs leading-relaxed text-white max-md:p-3 sm:text-base md:text-left">
+								{`A software engineer with a passion for full-stack development and a background in game development.`}
+							</h5>
+						</div>
+					</Link>
 				</div>
 				<div className="card group col-span-2 col-start-3 row-span-4 row-start-1 overflow-hidden transition-all duration-500 hover:scale-[1.025]">
 					<Link href="#projects" scroll={true}>
