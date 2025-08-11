@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Head from 'next/head';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 const geistSans = Geist({
 	variable: '--font-geist-sans',
 	subsets: ['latin']
@@ -31,7 +33,10 @@ export default function RootLayout({
 					src="https://code.tugcanonbas.com/js/script.js"
 				></script>
 			</Head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+				{children}
+				<SpeedInsights />
+			</body>
 		</html>
 	);
 }
